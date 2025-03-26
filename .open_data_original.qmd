@@ -1,0 +1,64 @@
+---
+title: "Critique des données par rapport au principe FAIR"
+author: "___, ___, ___, ___"
+date: "`r Sys.Date()`"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+editor: visual
+lang: fr
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+# Ceci est nécessaire pour les tests SDD, ne pas utiliser dans un "vrai" projet
+if (!"tools:tests" %in% search())
+  source(here::here("tests/tools_tests.R"), attach(NULL, name = "tools:tests"))
+
+# Configuration de l'environnement SciViews::R
+SciViews::R(lang = "fr")
+```
+
+
+## Principe FAIR
+
+Le principe FAIR s'applique aux données ouvertes et permet de vérifier si elles sont effectivement accessibles et réutilisables. Dans ce document, nous indiquons comment nous avons récupéré nos données et nous déterminons si elles rencontrent (ou non) les quatre contraintes relatives à ce principe.
+
+### Récupération des données
+
+<!--% Complétez le select_answer() ci-dessous pour indiquer comment vous avez récupéré les données ouvertes dans votre projet (ne cochez d'un 'x' qu'une seule entrée). -->
+
+```{r dataread, output='asis'}
+select_answer(r"-{
+[] Les données sont disponibles en téléchargement direct depuis une URL. Nous l'avons utilisée et nous avons mis les données en cache dans `data/cache` pour plus de facilité.
+[] Le site est accessible librement, mais aucune URL de téléchargement direct n'est proposée. Nous avons dû télécharger les données manuellement et nous les avons placées dans le dossier `data` du projet.
+[] Le site nécessite d'être enregistré avec un login et un mot de passe pour pouvoir accéder aux données. Un lien de téléchargement direct est alors disponible. Cependant l'étape de login nous a obligé à récupérer les données manuellement et à les placer dans le dossier `data` du projet.
+[] Les données sont disponibles par l'intermédiaire d'une URL à téléchargement direct. Cependant, le fichier obtenu est une archive compressée contenant bien plus que le tableau de données souhaité. Nous avons été obligés de décompresser l'archive et de placer le fichier cible manuellement dans le dossier `data`du projet.
+[] Des raisons non reprises dans la liste des possibilités nous ont empêché de télécharger les données directement. Nous avons placé le fichier manuellement dans le dossier `data` du projet et nous explicitons ci-dessous les raisons qui nous ont obligé à le faire.}-")
+```
+
+<!--% Si vous avez coché la dernière option, expliquez de manière concise ci-dessous pourquoi il n'est pas possible de télécharger directement ces données ouvertes. -->
+
+
+### Findable
+
+<!--% Rédigez un paragraphe de 2 ou 4 phrases maximum relatif au critère "Findable" du principe FAIR (étudiant #1). -->
+
+
+### Accessible
+
+<!--% Rédigez un paragraphe de 2 ou 4 phrases maximum relatif au critère "Accessible" du principe FAIR (étudiant #2). -->
+
+
+### Interoperable
+
+<!--% Rédigez un paragraphe de 2 ou 4 phrases maximum relatif au critère "Interoperable" du principe FAIR (étudiant #3). -->
+
+
+### Reusable
+
+<!--% Rédigez un paragraphe de 2 ou 4 phrases maximum relatif au critère "Reusable" du principe FAIR (étudiant #4). -->
+

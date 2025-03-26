@@ -1,0 +1,53 @@
+---
+title: "___"
+author: "___, ___, ___, ___"
+date: "`r Sys.Date()`"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+editor: visual
+lang: fr
+editor_options: 
+  chunk_output_type: inline
+---
+
+<!--# Notez bien ceci : ce document est un rapport, pas un bloc-notes. Cela signifie que vous devez écrire des phrases rédigées, des paragraphes complets, des sections et des sous-sections. Vous devez également citer vos sources correctement. N'utilisez pas des liste à puces comme vous en avez l'habitude dans vos bloc-notes. Répartissez-vous le travail. La collaboration de chaque étudiant doit être balancée et bien identifiable dans les commits. Donnez un titre court mais explicite à ce document. -->
+
+```{r setup, include=FALSE}
+# Ceci est nécessaire pour les tests SDD, ne pas utiliser dans un "vrai" projet
+if (!"tools:tests" %in% search())
+  source(here::here("tests/tools_tests.R"), attach(NULL, name = "tools:tests"))
+fs::dir_create("data/cache", recurse = TRUE)
+
+# Configuration de l'environnement SciViews::R
+SciViews::R("___", lang = "fr")
+```
+
+# Introduction et but
+
+<!--% Précisez en deux paragraphes maximum ce que vous allez analyser et pour répondre à quelle question biologique. -->
+
+# Matériel et méthodes
+
+<!--% Centrez-vous sur les données ici : d'où proviennent-elles ? Comment ont-elles été récoltées ? Il ne s'agit pas de faire un copier-coller du document `open_data.Rmd`, mais de rédiger ceci comme un texte propice pour une section matériel et méthodes d'un rapport en deux paragraphes maximum. Ajoutez ensuite un paragraphe relatif aux outils logiciels et statistiques que vous utilisez (inspirez-vous de vos projets antérieurs). -->
+
+# Résultats
+
+<!--% Vos données doivent être récupérables de l'une des deux manières suivantes : (1) lien URL et mise en cache dans data/cache ou (2) données placées dans data, et ce, dans un chunk obligatoirement nommé 'import'. Dans les deux cas, vous utilisez la fonction `read()` pour les récupérer. Ensuite, ajoutez autant de chunks que nécessaire, pour le remaniement éventuel des données. -->
+
+```{r import}
+___ <- read(___)
+___
+```
+
+<!--% Décrivez vos données de manière adéquate (tableaux et/ou graphiques) par rapport à votre objectif de réaliser une analyse SOM ensuite. -->
+
+<!--% Réalisez une analyse SOM sur les données et interprétez-là. Si l'analyse n'est pas possible, démontrez pourquoi. Section non limitée en taille. -->
+
+# Discussion et conclusions
+
+<!--% Discutez et concluez à la fois sur les données et sur l'analyse. Section non limitée en taille. -->
+
+<!--% Bonus : ajoutez une section "Références" pour pointer vers des sources externes relatives à vos données ou à votre analyse et citez correctement vos sources dans l'introduction, le matériel et méthodes et la discussion en utilisant les balises R Markdown. -->

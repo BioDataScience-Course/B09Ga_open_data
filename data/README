@@ -1,0 +1,7 @@
+Une copie (cache) de vos données doit être placée dans le sous-dossier "data/cache". Le contenu de ce dossier ne sera pas repris dans le versioning de git et GitHub. Pour ce faire, vous utiliserez la fonction suivante de SciViews::R :
+
+read$<type>("<url_vers_les_données>", cache_file = fs::path("data", "cache", "<data_file>.<type>"))
+
+en prenant bien soin de remplacer les items entre crochets < > en fonction du contexte (type, url, data-file). "Type" est l'extension du fichier correspondant à son format (par exemple, 'csv' ou 'xlsx'). Cette fonction est utilisée partout pour se référer aux données.
+
+Dans le cas où les données ne seraient PAS téléchargeables directement, et à condition que le fichier les contenant ne fasse pas plus de 50Mo, vous placerez une copie de ces données dans le sous-dossier "data" manuellement (pas dans data/cache !), et vous expliquerez dans le document "opend_data.qmd" pour quelles raisons les données ne sont pas accessibles directement par lien URL. Vous les chargerez alors normalement à l'aide de la fonction read() comme vous en avez l'habitude.
