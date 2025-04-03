@@ -22,7 +22,8 @@ test_that("Le rapport report.qmd est-il compilé en un fichier final HTML ?", {
 
 test_that("La structure du document report.qmd est-elle conservée ?", {
   expect_true(all(c("Introduction et but", "Matériel et méthodes",
-    "Résultats", "Discussion et conclusions")
+    "Résultats", "Description", "Analyse MDS", "Analyse SOM",
+    "Discussion et conclusions")
     %in% (rmd_node_sections(report) |> unlist() |> unique())))
   # Les sections (titres) attendues du rapport report.qmd ne sont pas toutes
   # présentes

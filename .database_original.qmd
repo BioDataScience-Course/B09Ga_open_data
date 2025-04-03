@@ -1,0 +1,47 @@
+---
+title: "Conversion des données en SQLite"
+author: "___, ___, ___, ___"
+date: "`r Sys.Date()`"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+editor: visual
+lang: fr
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+# Ceci est nécessaire pour les tests SDD, ne pas utiliser dans un "vrai" projet
+if (!"tools:tests" %in% search())
+  source(here::here("tests/tools_tests.R"), attach(NULL, name = "tools:tests"))
+
+# Configuration de l'environnement SciViews::R
+SciViews::R(lang = "fr")
+```
+
+## Base de données relationnelle
+
+SQLite est un moteur de bases de données relationnelles. Les données se répartissent entre une et plusieurs tables (que nous normalisons au niveau 3NF) et les enregistrements sont identifiés par une clé primaire. S'il y a plusieurs tables, des clés étrangères sont utilisées pour les relier.
+
+### Récupération des données
+
+<!--% Complétez le select_answer() ci-dessous pour indiquer comment vous avez récupéré les données ouvertes dans votre projet (ne cochez d'un 'x' qu'une seule entrée). -->
+
+```{r dataread, output='asis'}
+select_answer(r"-{
+[] Les données sont disponibles en téléchargement direct depuis une URL. Nous l'avons utilisée et nous avons mis les données en cache dans `data/cache` pour plus de facilité.
+[] Le site est accessible librement, mais aucune URL de téléchargement direct n'est proposée. Nous avons dû télécharger les données manuellement et nous les avons placées dans le dossier `data` du projet.
+[] Le site nécessite d'être enregistré avec un login et un mot de passe pour pouvoir accéder aux données. Un lien de téléchargement direct est alors disponible. Cependant l'étape de login nous a obligé à récupérer les données manuellement et à les placer dans le dossier `data` du projet.
+[] Les données sont disponibles par l'intermédiaire d'une URL à téléchargement direct. Cependant, le fichier obtenu est une archive compressée contenant bien plus que le tableau de données souhaité. Nous avons été obligés de décompresser l'archive et de placer le fichier cible manuellement dans le dossier `data`du projet.
+[] Des raisons non reprises dans la liste des possibilités nous ont empêché de télécharger les données directement. Nous avons placé le fichier manuellement dans le dossier `data` du projet et nous explicitons ci-dessous les raisons qui nous ont obligé à le faire.}-")
+```
+
+<!--% Si vous avez coché la dernière option, expliquez de manière concise ci-dessous pourquoi il n'est pas possible de télécharger directement ces données ouvertes. -->
+
+### Elaboration du schéma de la base de données
+
+<!--% Expliquez ci-dessous votre démarche pour réaliser un schéma correct pour votre base de données à l'aide des fonctions du package {dm} et placez le code qui réalise ce travail dans des chunks. -->
+

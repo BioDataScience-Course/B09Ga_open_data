@@ -20,7 +20,7 @@ test_that("Le bloc-notes open_data est-il compilé en un fichier final HTML ?", 
 })
 
 test_that("La structure du document open_data est-elle conservée ?", {
-  expect_true(all(c("Principe FAIR", "Récupération des données",
+  expect_true(all(c("Principe FAIR",
     "Findable", "Accessible", "Interoperable", "Reusable")
     %in% (rmd_node_sections(open_data) |> unlist() |> unique())))
   # Les sections (titres) attendues du bloc-notes open_data.qmd ne sont pas
@@ -31,7 +31,7 @@ test_that("La structure du document open_data est-elle conservée ?", {
   # d'origine dans le dépôt "template" du document (lien au début du fichier
   # README.md).
 
-  expect_true(all(c("setup", "dataread") %in% rmd_node_label(open_data)))
+  expect_true(all(c("setup") %in% rmd_node_label(open_data)))
   # Un ou plusieurs labels de chunks nécessaires à l'évaluation manquent dans
   # open_data.qmd
   # Ce test échoue si vous avez modifié la structure du document, un ou

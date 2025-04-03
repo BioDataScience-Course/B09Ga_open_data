@@ -42,12 +42,20 @@ ___ <- read(___)
 ___
 ```
 
+## Description
+
 <!--% Décrivez vos données de manière adéquate (tableaux et/ou graphiques) par rapport à votre objectif de réaliser une analyse SOM ensuite. -->
 
-<!--% Réalisez une analyse SOM sur les données et interprétez-là. Si l'analyse n'est pas possible, démontrez pourquoi. Section non limitée en taille. -->
+## Analyse MDS
+
+<!--% Module 9 : réalisez une analyse MDS métrique ou non métrique sur les données et interprétez-là. Si l'analyse n'est pas possible, expliquez pourquoi. Section non limitée en taille. -->
+
+## Analyse SOM
+
+<!--% Module 10 : réalisez une analyse SOM sur les données et interprétez-là. Si l'analyse n'est pas possible, démontrez pourquoi. Section non limitée en taille. -->
 
 # Discussion et conclusions
 
-<!--% Discutez et concluez à la fois sur les données et sur l'analyse. Section non limitée en taille. -->
+<!--% Discutez et concluez à la fois sur les données et sur les analyses. Section non limitée en taille. -->
 
 <!--% Bonus : ajoutez une section "Références" pour pointer vers des sources externes relatives à vos données ou à votre analyse et citez correctement vos sources dans l'introduction, le matériel et méthodes et la discussion en utilisant les balises R Markdown. -->

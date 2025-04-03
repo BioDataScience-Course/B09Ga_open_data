@@ -12,6 +12,8 @@ original :
 	echo "  • Remplacement des fichiers de travail par les originaux..."
 	Rscript -e "source('tools_tests.R'); res <- prepare_files(type = 'original')"
 	echo "  • Élimination des versions compilées des documents Quarto..."
+	rm -f ../database.html
+	rm -rf ../database_files
 	rm -f ../open_data.html
 	rm -rf ../open_data_files
 	rm -f ../report.html
@@ -30,6 +32,8 @@ solution :
 	echo "  • Remplacement des fichiers de travail par les solutions..."
 	Rscript -e "source('tools_tests.R'); res <- prepare_files(type = 'solution')"
 	echo "  • Élimination des version compilées des documents Quarto..."
+	rm -f ../database.html
+	rm -rf ../database_files
 	rm -f ../open_data.html
 	rm -rf ../open_data_files
 	rm -f ../report.html
@@ -48,6 +52,8 @@ prepare :
 	echo "  • Cryptage des fichiers de solution..."
 	Rscript -e "source('tools_tests.R'); res <- encrypt_solutions()"
 	echo "  • Élimination des versions compilées des documents Quarto..."
+	rm -f ../database.html
+	rm -rf ../database_files
 	rm -f ../open_data.html
 	rm -rf ../open_data_files
 	rm -f ../report.html
